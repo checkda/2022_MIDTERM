@@ -37,4 +37,4 @@ plot_file <- read_pptx() %>%
 print(plot_file, target = "plot_file.pptx")
 ```
 ![q3](q3.png)
-:file_folder: [plot_file.pptx](plot_file.pptx)
+:paperclip: [plot_file.pptx](plot_file.pptx)
