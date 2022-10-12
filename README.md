@@ -33,3 +33,4 @@ plot_file <- read_pptx() %>%
   add_slide() %>% ph_with(dml(ggobj = p), location = ph_location_type(type="body"))
 print(plot_file, target = "plot_file.pptx")
 ```
+![q3](q3.png)
