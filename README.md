@@ -20,3 +20,16 @@ both <- aggregate(cbind(WSTC, BMI) ~ EXMD_BZ_YYYY, data = a, function(x){c(mean 
 aggregate(cbind(WSTC, BMI) ~ EXMD_BZ_YYYY, data = a, function(x){c(mean = mean(x), sd = sd(x))})
 ```
 ![q2](q2.png)
+
+## Q3. 연도별 “FBS”를 나타내는 Boxplot을 그린 후 pptx로 저장하세요. (x축: “EXMD_BZ_YYYY”, y축: “FBS”)
+
+```
+a$EXMD_BZ_YYYY <- factor(a$EXMD_BZ_YYYY)
+p <- ggboxplot(a, "EXMD_BZ_YYYY", "FBS", fill = "EXMD_BZ_YYYY", color = "EXMD_BZ_YYYY")
+
+plot_vec <- rvg::dml(ggobj = p)
+
+plot_file <- read_pptx() %>%
+  add_slide() %>% ph_with(dml(ggobj = p), location = ph_location_type(type="body"))
+print(plot_file, target = "plot_file.pptx")
+```
