@@ -18,3 +18,18 @@ a[, (var.factor) := lapply(.SD, as.factor), .SD = var.factor]
 a[, (var.conti) := lapply(.SD, as.numeric), .SD = var.conti]
 sapply(a, class)
 ```
+> sapply(a, class) 
+  EXMD_BZ_YYYY        RN_INDI     HME_YYYYMM   Q_PHX_DX_STK  Q_PHX_DX_HTDZ 
+      "factor"      "numeric"      "numeric"       "factor"       "factor" 
+  Q_PHX_DX_HTN    Q_PHX_DX_DM   Q_PHX_DX_DLD   Q_PHX_DX_PTB       Q_HBV_AG 
+      "factor"       "factor"       "factor"       "factor"       "factor" 
+      Q_SMK_YN Q_DRK_FRQ_V09N           HGHT           WGHT           WSTC 
+      "factor"       "factor"      "numeric"      "numeric"      "numeric" 
+           BMI          VA_LT          VA_RT         BP_SYS         BP_DIA 
+     "numeric"      "numeric"      "numeric"      "numeric"      "numeric" 
+      URN_PROT            HGB            FBS       TOT_CHOL             TG 
+     "numeric"      "numeric"      "numeric"      "numeric"      "numeric" 
+           HDL            LDL           CRTN           SGOT           SGPT 
+     "numeric"      "numeric"      "numeric"      "numeric"      "numeric" 
+           GGT            GFR 
+     "numeric"      "numeric" 
