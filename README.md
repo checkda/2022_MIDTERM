@@ -1,4 +1,4 @@
-# Q1. “Q_” 로 시작하는 변수는 범주형(factor)으로, 나머지 변수는 숫자형(integer)으로 만드세요.   
+## Q1. “Q_” 로 시작하는 변수는 범주형(factor)으로, 나머지 변수는 숫자형(integer)으로 만드세요.   
 
 ```
 library(data.table);library(magrittr);library(ggpubr);library(rvg);library(officer) 
@@ -9,3 +9,7 @@ var.factor <- grep("Q_", names(a), value = T)
 var.factor
 ```
   
+```
+var.conti <- names(a)[!(names(a) %in% var.factor)] 
+var.conti
+```
