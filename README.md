@@ -2,7 +2,7 @@
 
 ## Q1. “Q_” 로 시작하는 변수는 범주형(factor)으로, 나머지 변수는 숫자형(integer)으로 만드세요.   
 
-```
+```R
 library(data.table);library(magrittr);library(ggpubr);library(rvg);library(officer) 
 a <- fread("https://raw.githubusercontent.com/jinseob2kim/R-skku-biohrs/main/data/example_g1e.csv")
 
@@ -17,7 +17,7 @@ sapply(a, class)
 
 ## Q2. 연속 변수 “WSTC”와 “BMI”의 연도별 평균 및 표준편차를 구하세요.
 
-```
+```R
 both <- aggregate(cbind(WSTC, BMI) ~ EXMD_BZ_YYYY, data = a, function(x){c(mean = mean(x), sd = sd(x))})
 aggregate(cbind(WSTC, BMI) ~ EXMD_BZ_YYYY, data = a, function(x){c(mean = mean(x), sd = sd(x))})
 ```
@@ -25,7 +25,7 @@ aggregate(cbind(WSTC, BMI) ~ EXMD_BZ_YYYY, data = a, function(x){c(mean = mean(x
 
 ## Q3. 연도별 “FBS”를 나타내는 Boxplot을 그린 후 pptx로 저장하세요. (x축: “EXMD_BZ_YYYY”, y축: “FBS”)
 
-```
+```R
 a$EXMD_BZ_YYYY <- factor(a$EXMD_BZ_YYYY)
 p <- ggboxplot(a, "EXMD_BZ_YYYY", "FBS", fill = "EXMD_BZ_YYYY", color = "EXMD_BZ_YYYY")
 
