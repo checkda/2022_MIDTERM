@@ -13,3 +13,8 @@ var.factor
 var.conti <- names(a)[!(names(a) %in% var.factor)] 
 var.conti
 ```
+```
+a[, (var.factor) := lapply(.SD, as.factor), .SD = var.factor]
+a[, (var.conti) := lapply(.SD, as.numeric), .SD = var.conti]
+sapply(a, class)
+```
