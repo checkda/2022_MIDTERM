@@ -18,4 +18,4 @@ a[, (var.factor) := lapply(.SD, as.factor), .SD = var.factor]
 a[, (var.conti) := lapply(.SD, as.numeric), .SD = var.conti]
 sapply(a, class)
 ```
-![q1](C:\Users\hyegy\OneDrive\바탕 화면\q1.png)
+![q1]("C:\Users\hyegy\OneDrive\바탕 화면\q1.png")
