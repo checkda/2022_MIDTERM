@@ -18,7 +18,5 @@ a[, (var.factor) := lapply(.SD, as.factor), .SD = var.factor]
 a[, (var.conti) := lapply(.SD, as.numeric), .SD = var.conti]
 sapply(a, class)
 ```
-
 ![q1](q1.png)
 
-![q1](./q1.png)
