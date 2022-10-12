@@ -1,4 +1,4 @@
-#                              **2022년 10월 18일 중간고사**
+# **2022년 10월 18일 중간고사**
 
 ## Q1. “Q_” 로 시작하는 변수는 범주형(factor)으로, 나머지 변수는 숫자형(integer)으로 만드세요.   
 
@@ -36,3 +36,4 @@ plot_file <- read_pptx() %>%
 print(plot_file, target = "plot_file.pptx")
 ```
 ![q3](q3.png)
+[plot_file.pptx](plot_file.pptx)
